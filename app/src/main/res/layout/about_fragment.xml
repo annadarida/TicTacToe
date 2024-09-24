@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Title of the Game -->
+        <TextView
+            android:id="@+id/gameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Snack Attack: Pizza vs Donut"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- Version Info -->
+        <TextView
+            android:id="@+id/versionInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Version 1.0"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+        <!-- Game Logo (Optional) -->
+        <ImageView
+            android:id="@+id/gameLogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="Game Logo"
+            android:src="@drawable/pizza_donut_icon" />
+
+        <!-- Game Description -->
+        <TextView
+            android:id="@+id/gameDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:text="Welcome to Snack Attack! The tastiest Tic Tac Toe game you'll ever play where Pizza slices (X) battle it out with Donuts (O). Are you Team Pizza or Team Donut?"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <!-- Developer Info -->
+        <TextView
+            android:id="@+id/developerInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:text="Developed by a passionate fan of cats, pizzas, and donuts! When I'm not coding, you can find me enjoying a slice of pizza, sipping coffee, or petting my cat."
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <!-- Developer's Social Media or Website Button -->
+        <Button
+            android:id="@+id/contactButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="12dp"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

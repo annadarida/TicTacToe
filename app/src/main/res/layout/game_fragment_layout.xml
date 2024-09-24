@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.tictactoe.ui.game.GameViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <GridLayout
+            android:id="@+id/play_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:orientation="horizontal"
+            android:rowCount="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/grid_1_1"
+                style="@style/GridCellStyle"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_1_1"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/grid_1_2"
+                style="@style/GridCellStyle"
+                android:background="@drawable/grid_background"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_1_2"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/grid_1_3"
+                style="@style/GridCellStyle"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_1_3"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/grid_2_1"
+                style="@style/GridCellStyle"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_2_1"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/grid_2_2"
+                style="@style/GridCellStyle"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_2_2"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/grid_2_3"
+                style="@style/GridCellStyle"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_2_3"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/grid_3_1"
+                style="@style/GridCellStyle"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_3_1"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/grid_3_2"
+                style="@style/GridCellStyle"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_3_2"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/grid_3_3"
+                style="@style/GridCellStyle"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_3_3"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/instructions_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_black_italic"
+            android:textSize="20sp"
+            android:text="@{viewmodel.instructionString}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/play_grid" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
